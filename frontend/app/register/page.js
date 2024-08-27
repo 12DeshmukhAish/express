@@ -2,7 +2,6 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { registerUser } from '../../lib/api'
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -22,10 +21,26 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await registerUser(formData)
-      router.push('/login')
+      const response = await fetch('/api/users/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        // Registration successful
+        router.push('/login') // Redirect to login page
+      } else {
+        // Registration failed
+        const errorData = await response.json()
+        console.error('Registration failed:', errorData.error)
+        // Handle error (e.g., show error message to user)
+      }
     } catch (error) {
-      console.error('Registration failed:', error)
+      console.error('Error during registration:', error)
+      // Handle network errors
     }
   }
 
