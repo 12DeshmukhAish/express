@@ -1,8 +1,7 @@
 module.exports = {
   content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    './pages/**/*.{js,ts,jsx,tsx}', // Adjust these paths according to your project structure
+    './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
     extend: {},

@@ -12,7 +12,11 @@ export default function AddEquipment() {
     rentalPrice: '',
     availabilityDate: '',
     image: '',
+    ownerName: '',
+    address: '',
+    contactNumber: '',
   })
+  const [error, setError] = useState(null)
   const router = useRouter()
 
   const handleChange = (e) => {
@@ -21,10 +25,12 @@ export default function AddEquipment() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    setError(null)
     try {
       await addEquipment(formData)
       router.push('/dashboard')
     } catch (error) {
+      setError(error.message)
       console.error('Failed to add equipment:', error)
     }
   }
@@ -32,6 +38,7 @@ export default function AddEquipment() {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Add New Equipment</h1>
+      {error && <p className="text-red-500 mb-4">{error}</p>}
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           name="name"
@@ -79,6 +86,30 @@ export default function AddEquipment() {
           value={formData.image}
           onChange={handleChange}
           placeholder="Image URL"
+          required
+          className="w-full p-2 border rounded"
+        />
+        <input
+          name="ownerName"
+          value={formData.ownerName}
+          onChange={handleChange}
+          placeholder="Owner Name"
+          required
+          className="w-full p-2 border rounded"
+        />
+        <input
+          name="address"
+          value={formData.address}
+          onChange={handleChange}
+          placeholder="Address"
+          required
+          className="w-full p-2 border rounded"
+        />
+        <input
+          name="contactNumber"
+          value={formData.contactNumber}
+          onChange={handleChange}
+          placeholder="Contact Number"
           required
           className="w-full p-2 border rounded"
         />
