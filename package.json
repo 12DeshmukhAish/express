@@ -8,9 +8,12 @@
     "start:frontend": "cd frontend && next start",
     "lint": "cd frontend && next lint",
     "dev:backend": "nodemon backend/server.js",
-    "start:backend": "node backend/server.js"
+    "start:backend": "node backend/server.js",
+    "backend": "node server.js"
   },
   "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@nextui-org/react": "^2.4.6",
     "autoprefixer": "^10.4.20",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
@@ -21,7 +24,8 @@
     "mongoose": "^8.5.4",
     "next": "^14.2.5",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@types/node": "^20.16.5",
