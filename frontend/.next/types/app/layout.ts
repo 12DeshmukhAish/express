@@ -1,4 +1,4 @@
-// File: E:\Agrirentjava\agrirent\frontend\app\layout.js
+// File: D:\Agrirent\express\frontend\app\layout.js
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
