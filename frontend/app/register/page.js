@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
+import { toast, Toaster } from 'react-hot-toast'
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -22,6 +23,7 @@ export default function Register() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     setError(null)
+    
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match")
       return
@@ -37,14 +39,31 @@ export default function Register() {
       })
 
       if (response.ok) {
-        router.push('/login') // Redirect to login page
+        // Show success toast message
+        toast.success('Registration successful!')
+
+        // Clear form fields after successful registration
+        setFormData({
+          fullName: '',
+          email: '',
+          contactNumber: '',
+          address: '',
+          password: '',
+          confirmPassword: '',
+        })
+
+        // Redirect to login page after successful registration
+        router.push('/login')
       } else {
         const errorData = await response.json()
         setError(errorData.error)
+        // Show error toast message
+        toast.error(errorData.error || 'Registration failed. Please try again.')
       }
     } catch (error) {
       setError("Registration failed. Please try again.")
       console.error('Error during registration:', error)
+      toast.error("Registration failed. Please try again.")
     }
   }
 
@@ -139,7 +158,7 @@ export default function Register() {
             <label htmlFor="confirmPassword" className="form__label">Confirm Password</label>
           </div>
 
-          <button className="reg-button">Register</button>
+          <button type="submit" className="reg-button">Register</button>
         </form>
       </div>
       {/* Add the Toaster component to display toast notifications */}
