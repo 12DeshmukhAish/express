@@ -1,4 +1,4 @@
-// File: E:\Agrirentjava\agrirent\frontend\app\api\equipment\route.js
+// File: C:\Users\deshm\OneDrive\Documents\Desktop\Agri\express\frontend\app\api\equipment\route.js
 import * as entry from '../../../../../app/api/equipment/route.js'
 import type { NextRequest } from 'next/server.js'
 

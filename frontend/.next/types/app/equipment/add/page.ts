@@ -1,4 +1,4 @@
-// File: E:\Agrirentjava\agrirent\frontend\app\equipment\add\page.js
+// File: C:\Users\deshm\OneDrive\Documents\Desktop\Agri\express\frontend\app\equipment\add\page.js
 import * as entry from '../../../../../app/equipment/add/page.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
