@@ -599,3 +599,198 @@
 .login-submit-button:active {
   transform: translateY(-1px);
 }
+
+
+
+/* Home page css */
+
+/* Global Styles */
+
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-center {
+  background-position: center;
+}
+
+.shadow-text {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Header */
+header {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 40px;
+  width: 40px;
+}
+
+header input[type="text"] {
+  border-radius: 9999px;
+  transition: box-shadow 0.2s ease;
+}
+
+header input[type="text"]:focus {
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.5); /* Focus ring */
+}
+
+header button:hover {
+  transform: scale(1.05);
+}
+
+/* Sidebar */
+nav {
+  width: 16rem; /* 64px */
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+nav ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+nav ul li button {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem; /* Rounded corners */
+}
+
+nav ul li button:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+/* Sidebar Toggle Button */
+.fixed button {
+  padding: 0.5rem;
+  border-radius: 9999px;
+  background-color: white;
+  transition: background-color 0.2s;
+}
+
+.fixed button:hover {
+  background-color: rgba(16, 185, 129, 0.1);
+}
+
+/* Hero Section */
+.hero-section h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  color: white;
+}
+
+/* Login Modal */
+.modal-background {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  max-width: 24rem; /* Max width of modal */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content form input[type="email"],
+.modal-content form input[type="password"] {
+  padding: 0.75rem;
+  border: 1px solid rgb(68, 96, 138); /* Border gray */
+  border-radius: 0.375rem; /* Rounded corners */
+}
+
+.modal-content form button {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.375rem;
+  background-color: rgba(16, 185, 129, 1); /* Green button */
+  color: white;
+  font-weight: bold;
+}
+
+.modal-content form button:hover {
+  background-color: rgba(22, 163, 74, 1); /* Hover effect */
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.modal-close:hover {
+  color: rgba(107, 114, 128, 1); /* Gray */
+}
+
+
+
+
+
+
+/* This CSS will style the Header component */
+
+header {
+  /*background-color: #3b82f6; Tailwind's bg-blue-500 */
+  color: #111111; /* Tailwind's text-white */
+  padding: 1rem; /* Tailwind's p-4 */
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 2200px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+nav a {
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.5rem; /* Tailwind's text-2xl */
+  font-weight: 700; /* Tailwind's font-bold */
+}
+
+nav ul {
+  display: flex;
+  gap: 1rem; /* Tailwind's space-x-4 */
+}
+
+nav li {
+  list-style: none;
+}
+
+nav li a {
+  color: inherit;
+  font-size: 1rem; /* Default font size */
+}
