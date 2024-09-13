@@ -38,12 +38,12 @@ export default function AddEquipment() {
     <div className="add-equipment-page-container">
       {/* Left Side: Image */}
       <div className="add-equipment-image-container">
-        <img
-          src="/path-to-your-image.jpg" // Replace with your actual image URL
-          alt="Add Equipment"
-          className="add-equipment-image"
-        />
-      </div>
+  <img
+    src="/addequip.png" // Correct path, if image is in the public folder
+    alt="Add Equipment"
+    className="add-equipment-image"
+  />
+</div>
 
       {/* Right Side: Form */}
       <div className="add-equipment-form-container">

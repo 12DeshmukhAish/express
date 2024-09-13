@@ -1,0 +1,701 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ../node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[2]!../node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[12].use[3]!./styles/globals.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+/* globals.css  for add equipments*/
+/* Page container with two parts */
+.add-equipment-page-container {
+  display: flex;
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  min-height: 100vh; /* Ensure full height of viewport */
+  box-sizing: border-box; /* Ensures padding is included in the height calculation */
+  align-items: stretch; /* Ensures both sections stretch equally */
+  gap: 2rem; /* Adds space between the two sections */
+}
+
+/* Shared styling for both image and form */
+.shared-style {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100%; /* Stretch to fill the container */
+}
+
+/* Left side: Image container */
+.add-equipment-image-container {
+  /* Apply shared styling */
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100%; /* Make it stretch to fill the container */
+}
+
+/* Image styling */
+.add-equipment-image {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain; /* Ensures the image scales well */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Same box-shadow for visual consistency */
+  padding: 1rem;
+  background-color: #f9fafb; /* Light background color for image */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Right side: Form container */
+.add-equipment-form-container {
+  /* Apply shared styling */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  box-sizing: border-box;
+  height: 100%; /* Make it stretch to fill the container */
+}
+
+/* Title styling */
+.add-equipment-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4b5563;
+  text-align: center;
+  padding-top: 8px;
+}
+
+/* Error message styling */
+.add-equipment-error {
+  color: #e11d48;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Form styling */
+.add-equipment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Two inputs in a row */
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Input width control */
+.half-width {
+  flex: 1;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Underlined input fields */
+.add-equipment-input,
+.add-equipment-textarea {
+  padding: 0.5rem 0;
+  border: none;
+  border-bottom: 2px solid #d1d5db;
+  background-color: transparent;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  width: 100%;
+}
+
+.add-equipment-input:focus,
+.add-equipment-textarea:focus {
+  border-bottom-color: #10b981; /* Green underline on focus */
+  outline: none;
+}
+
+/* Textarea styling */
+.add-equipment-textarea {
+  min-height: 70px;
+  resize: vertical;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .add-equipment-page-container {
+    flex-direction: column;
+  }
+
+  .add-equipment-image-container {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .add-equipment-form-container {
+    padding-left: 0;
+  }
+}
+
+  
+  /* Submit button with light green color */
+  /* From Uiverse.io by yaroslavas2001 */ 
+.btn1 {
+    height: 4em;
+    width: 12em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 0px solid black;
+    cursor: pointer;
+  }
+  
+  .wrapper {
+    height: 2em;
+    width: 8em;
+    position: relative;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .text {
+    font-size: 17px;
+    z-index: 1;
+    color: #000;
+    padding: 4px 12px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.7);
+    transition: all 0.5s ease;
+  }
+  
+  .flower {
+    display: grid;
+    grid-template-columns: 1em 1em;
+    position: absolute;
+    transition: grid-template-columns 0.8s ease;
+  }
+  
+  .flower1 {
+    top: -12px;
+    left: -13px;
+    transform: rotate(5deg);
+  }
+  
+  .flower2 {
+    bottom: -5px;
+    left: 8px;
+    transform: rotate(35deg);
+  }
+  
+  .flower3 {
+    bottom: -15px;
+    transform: rotate(0deg);
+  }
+  
+  .flower4 {
+    top: -14px;
+    transform: rotate(15deg);
+  }
+  
+  .flower5 {
+    right: 11px;
+    top: -3px;
+    transform: rotate(25deg);
+  }
+  
+  .flower6 {
+    right: -15px;
+    bottom: -15px;
+    transform: rotate(30deg);
+  }
+  
+  .petal {
+    height: 1em;
+    width: 1em;
+    border-radius: 40% 70% / 7% 90%;
+    background: linear-gradient(#07d776, #93eeaa);
+    border: 0.5px solid #96ecb1;
+    z-index: 0;
+    transition: width 0.8s ease, height 0.8s ease;
+  }
+  
+  .two {
+    transform: rotate(90deg);
+  }
+  
+  .three {
+    transform: rotate(270deg);
+  }
+  
+  .four {
+    transform: rotate(180deg);
+  }
+  
+  .btn1:hover .petal {
+    
+    border: 0.5px solid #96ecb1;
+  }
+  
+  .btn1:hover .flower {
+    grid-template-columns: 1.5em 1.5em;
+  }
+  
+  .btn1:hover .flower .petal {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  
+  .btn1:hover .text {
+    background: rgba(255, 255, 255, 0.4);
+  }
+  
+  .btn1:hover div.flower1 {
+    animation: 15s linear 0s normal none infinite running flower1;
+  }
+  
+  @keyframes flower1 {
+    0% {
+      transform: rotate(5deg);
+    }
+  
+    100% {
+      transform: rotate(365deg);
+    }
+  }
+  
+  .btn1:hover div.flower2 {
+    animation: 13s linear 1s normal none infinite running flower2;
+  }
+  
+  @keyframes flower2 {
+    0% {
+      transform: rotate(35deg);
+    }
+  
+    100% {
+      transform: rotate(-325deg);
+    }
+  }
+  
+  .btn1:hover div.flower3 {
+    animation: 16s linear 1s normal none infinite running flower3;
+  }
+  
+  @keyframes flower3 {
+    0% {
+      transform: rotate(0deg);
+    }
+  
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .btn1:hover div.flower4 {
+    animation: 17s linear 1s normal none infinite running flower4;
+  }
+  
+  @keyframes flower4 {
+    0% {
+      transform: rotate(15deg);
+    }
+  
+    100% {
+      transform: rotate(375deg);
+    }
+  }
+  
+  .btn1:hover div.flower5 {
+    animation: 20s linear 1s normal none infinite running flower5;
+  }
+  
+  @keyframes flower5 {
+    0% {
+      transform: rotate(25deg);
+    }
+  
+    100% {
+      transform: rotate(-335deg);
+    }
+  }
+  
+  .btn1:hover div.flower6 {
+    animation: 15s linear 1s normal none infinite running flower6;
+  }
+  
+  @keyframes flower6 {
+    0% {
+      transform: rotate(30deg);
+    }
+  
+    100% {
+      transform: rotate(390deg);
+    }
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .add-equipment-page-container {
+      flex-direction: column;
+    }
+  
+    .add-equipment-image-container {
+      padding-right: 0;
+      margin-bottom: 2rem;
+    }
+  
+    .add-equipment-form-container {
+      padding-left: 0;
+    }
+  }
+  
+  
+  /* globals.css for register  */
+/* Full height for the register-page container */
+.register-page {
+  display: flex;
+  height: 100vh;
+}
+
+.image-section {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff; /* Light grey background for better contrast */
+}
+
+.register-image {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.form-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #ffffff; /* White background for the form */
+  box-shadow: 0px 4px 15px rgba(3, 34, 3, 0.3); /* Light green shadow */
+  border-radius: 5px;
+}
+
+.register-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: #333333; /* Dark text color for readability */
+}
+
+.register-error {
+  color: #dc2626; /* Red color for error messages */
+  margin-bottom: 1rem;
+}
+
+.register-form {
+  width: 100%;
+  max-width: 24rem; /* Limit the width of the form */
+  display: flex;
+  flex-direction: column;
+  gap: 0rem; /* Reduced space between input fields */
+}
+
+.register-input {
+  border: none;
+  border-bottom: 2px solid #d1d5db; /* Light grey border */
+  padding: 0.5rem;
+  outline: none;
+  transition: border-color 0.3s;
+  font-size: 1.1rem;
+}
+
+.register-input:focus {
+  border-color: #4ade80; /* Light green border on focus */
+}
+
+/* From Uiverse.io by cssbuttons-io */
+.reg-button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  background-color: #34d399; /* Light green background */
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.reg-button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.reg-button:active {
+  transform: translateY(-1px);
+}
+
+/* New form styling from Uiverse.io by mrhyddenn */
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 180px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #fff;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.form__field::-moz-placeholder {
+  color: transparent;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:-moz-placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #119963,#38efa9);
+     border-image: linear-gradient(to right, #119963,#38efa9);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38efa9;
+  font-weight: 700;
+}
+
+/* Reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+
+ /* globals.css for login */
+ .login-container {
+  display: flex;
+  height: 100vh;
+}
+
+.login-image {
+  flex: 1;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+}
+
+.login-image img {
+  width: 70%;
+  height: 70%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+
+.login-form-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 15px rgba(3, 34, 3, 0.3);
+    border-radius: 5px;
+  width: 60%;
+  height: 500px;
+}
+
+.login-title {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #4b5563;
+}
+
+.login-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Modified input fields based on Uiverse.io style */
+.form__group {
+  position: relative;
+  padding: 20px 0 0;
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 1.5rem;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 17px;
+  color: #374151;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+
+}
+
+.form__field::-moz-placeholder {
+  color: transparent;
+}
+
+.form__field::placeholder {
+  color: transparent;
+}
+
+.form__field:-moz-placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 17px;
+  cursor: text;
+  top: 20px;
+}
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #9b9b9b;
+  pointer-events: none;
+}
+
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  -o-border-image: linear-gradient(to right, #119963,#38efa9);
+     border-image: linear-gradient(to right, #119963,#38efa9);
+  border-image-slice: 1;
+}
+
+.form__field:focus ~ .form__label {
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 17px;
+  color: #38efa9;
+  font-weight: 700;
+}
+
+/* Reset input */
+.form__field:required, .form__field:invalid {
+  box-shadow: none;
+}
+
+/* Submit button */
+.login-submit-button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  width: 100%;
+  background-color: #34d399;
+  color: white;
+  padding: 0.8rem;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.login-submit-button:hover {
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
+}
+
+.login-submit-button:active {
+  transform: translateY(-1px);
+}
+
+/* Global Styles for home*/
+

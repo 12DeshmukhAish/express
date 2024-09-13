@@ -44,7 +44,7 @@ export default function Login() {
   return (
     <div className="login-container">
       <div className="login-image">
-        <img src="/path/to/your/image.jpg" alt="Login" />
+        <img src="login.png" alt="Login" />
       </div>
       <div className="login-form-container">
         <h1 className="login-title">Login</h1>
