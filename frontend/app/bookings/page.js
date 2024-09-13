@@ -1,6 +1,6 @@
 'use client'
-
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from "react";
+import { Input } from "@nextui-org/react";
 import { getUserBookings } from '../../lib/api'
 
 export default function Bookings() {
@@ -41,6 +41,15 @@ export default function Bookings() {
               <p>Start Date: {new Date(booking.startDate).toLocaleDateString()}</p>
               <p>End Date: {new Date(booking.endDate).toLocaleDateString()}</p>
               <p>Status: {booking.status}</p>
+              
+              {/* Email Input Field */}
+              <Input
+                isRequired
+                type="email"
+                label="Email"
+                defaultValue="junior@nextui.org"
+                className="max-w-xs"
+              />
             </li>
           ))}
         </ul>
