@@ -2,7 +2,7 @@
 
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
-import { toast, Toaster } from 'react-hot-toast'
+import { toast, Toaster } from 'react-hot-toast' 
 
 export default function Register() {
   const [formData, setFormData] = useState({
@@ -26,6 +26,9 @@ export default function Register() {
     
     if (formData.password !== formData.confirmPassword) {
       setError("Passwords do not match")
+      toast.error("Passwords do not match", {
+        duration: 4000,
+      })
       return
     }
 
@@ -40,7 +43,9 @@ export default function Register() {
 
       if (response.ok) {
         // Show success toast message
-        toast.success('Registration successful!')
+        toast.success('Registration successful!', {
+          duration: 4000,
+        })
 
         // Clear form fields after successful registration
         setFormData({
@@ -58,12 +63,16 @@ export default function Register() {
         const errorData = await response.json()
         setError(errorData.error)
         // Show error toast message
-        toast.error(errorData.error || 'Registration failed. Please try again.')
+        toast.error(errorData.error || 'Registration failed. Please try again.', {
+          duration: 4000,
+        })
       }
     } catch (error) {
       setError("Registration failed. Please try again.")
       console.error('Error during registration:', error)
-      toast.error("Registration failed. Please try again.")
+      toast.error("Registration failed. Please try again.", {
+        duration: 4000,
+      })
     }
   }
 
@@ -71,11 +80,10 @@ export default function Register() {
     <div className="register-page">
       <div className="image-section">
         {/* Add your image URL here */}
-        <img src="/path-to-your-image.jpg" alt="Register" className="register-image" />
+        <img src="register.png" alt="Register" className="register-image" />
       </div>
       <div className="form-section">
         <h1 className="register-title">Create Your Account</h1>
-        {error && <p className="register-error">{error}</p>}
         <form onSubmit={handleSubmit} className="register-form">
           {/* Full Name Input */}
           <div className="form__group field">
@@ -161,7 +169,6 @@ export default function Register() {
           <button type="submit" className="reg-button">Register</button>
         </form>
       </div>
-      {/* Add the Toaster component to display toast notifications */}
       <Toaster position="top-right" reverseOrder={false} />
     </div>
   )

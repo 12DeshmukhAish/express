@@ -3,6 +3,7 @@ import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from "@n
 
 export default function Home() {
   return (
+
     <Navbar isBordered className="bg-white shadow-lg">
       <NavbarBrand>
         <p className="font-bold text-inherit text-xl">ACME</p>
@@ -63,3 +64,4 @@ export default function Home() {
     </Navbar>
   );
 }
+
