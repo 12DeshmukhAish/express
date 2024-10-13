@@ -17,28 +17,38 @@ export default function AddEquipment() {
     contactNumber: '',
   })
   const [error, setError] = useState(null)
+  const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
 
   const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   }
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setError(null)
+    e.preventDefault();
+    setError(null);
+    setIsLoading(true);
     try {
-      await addEquipment(formData)
+      const result = await addEquipment(formData);
+      console.log('Equipment added successfully:', result);
       router.push('/dashboard')
     } catch (error) {
-      setError(error.message)
-      console.error('Failed to add equipment:', error)
+      console.error('Error in handleSubmit:', error);
+      setError(error.message);
+    } finally {
+      setIsLoading(false)
     }
   }
 
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">Add New Equipment</h1>
-      {error && <p className="text-red-500 mb-4">{error}</p>}
+      {error && (
+        <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
+          <strong className="font-bold">Error: </strong>
+          <span className="block sm:inline">{error}</span>
+        </div>
+      )}
       <form onSubmit={handleSubmit} className="space-y-4">
         <input
           name="name"
@@ -86,7 +96,6 @@ export default function AddEquipment() {
           value={formData.image}
           onChange={handleChange}
           placeholder="Image URL"
-          required
           className="w-full p-2 border rounded"
         />
         <input
@@ -113,8 +122,12 @@ export default function AddEquipment() {
           required
           className="w-full p-2 border rounded"
         />
-        <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">
-          Add Equipment
+        <button
+          type="submit"
+          className="w-full bg-blue-500 text-white p-2 rounded disabled:opacity-50"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Adding...' : 'Add Equipment'}
         </button>
       </form>
     </div>
